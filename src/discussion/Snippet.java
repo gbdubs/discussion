@@ -150,4 +150,13 @@ public class Snippet{
 			return ((Snippet) s).getDatastoreKey().equals(getDatastoreKey());
 		}	
 	}
+	
+	public String getRandomSecondaryColor(){
+		String[] colors = {"#00B9AE", "#3F7CAC", "#0C7489", "#4C7D57", "#00B9AE", "#397367"};
+		int i = (int) (Math.random() * colors.length);
+		while (colors[i].equals(color)){
+			i = (int) (Math.random() * colors.length);
+		}
+		return colors[i];
+	}
 }

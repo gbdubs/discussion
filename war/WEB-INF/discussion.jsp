@@ -11,8 +11,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 </head>
-<body>
-    <div class="snippets">
+<body class="bg-grey-gradient">
+   
         <div class="title">Discuss.on</div>
         <div class="menu">
             <a href="/about">About</a>
@@ -32,7 +32,7 @@
 			
 				<div class="snippet">
 					<c:if test="${snippet.summary != ''}">
-						<div class="statement bubble bubble-right">
+						<div class="statement bubble bubble-right" style="border-color: ${snippet.color};">
 							<i class="fa fa-minus collapse-button"></i>
 							<div class="collapsed-text hidden">Summary of Your Opinion</div>
 							<div class="full-text">
@@ -48,7 +48,7 @@
 						</div>
 					</c:if>
 					<c:if test="${snippet.response != ''}">
-						<div class="response bubble bubble-left">
+						<div class="response bubble bubble-left" style="border-color: ${snippet.randomSecondaryColor};">
 							<i class="fa fa-minus collapse-button"></i>
 							<div class="collapsed-text hidden">A Response From A Peer</div>
 							<div class="full-text">
@@ -56,7 +56,7 @@
 							</div>
 						</div>
 					</c:if>
-					<div class="question">
+					<div class="question" style="background: ${snippet.randomSecondaryColor};">
 						<c:choose>
 							<c:when test="${snippet.response != ''}">
 								After reading the above, what do you think about the following:
@@ -70,7 +70,7 @@
 					
 					<div class="answers">
 						<c:forEach var="answerText" items="${snippet.answerTexts}" varStatus="loop">
-							<div class="answer" data-attached="${snippet.answerIds[loop.index]}">
+							<div class="answer" data-attached="${snippet.answerIds[loop.index]}" style="background: ${snippet.color};">
 								${answerText}
 							</div>
 						</c:forEach>

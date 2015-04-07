@@ -1,5 +1,8 @@
 body{
     margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .title {
@@ -10,7 +13,7 @@ body{
     text-align: center;
     width: 100%;
     z-index: 200;
-    color: #666;
+    color: #444;
 }
 
 .collapsed-text{
@@ -26,14 +29,14 @@ body{
     text-align: center;
     box-shadow: 0px 3px 71px 15px white;
     z-index: 150;
+    background-color: #FDFDFD;
 }
 
 
 .menu a{
     margin: 0 30px;
     color: #666;
-    background-color: white;
-
+    background-color: #FDFDFD;;
 }
 
 .bg-grey-gradient{
@@ -45,12 +48,6 @@ body{
     background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 80%,#dddddd 100%);
     background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 80%,#dddddd 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 );
-}
-
-.snippets{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
 }
 
 .snippet{
@@ -117,7 +114,9 @@ body{
     top: 0;
     right: 0;
     width: 20px;
-    height: 20px;
+    height: 0px;
+    border-bottom: 20px solid;
+    border-color: inherit;
     line-height: 18px;
     color: white;
     vertical-align: middle;
@@ -132,22 +131,15 @@ body{
 }
 
 .fa.fa-plus.collapse-button{
-    height: 24px;
+    height: 0px;
+    border-bottom: 24px solid;
+    border-color: inherit;
     width: 19px;
     line-height: 24px;
     border-radius: 15px;
     top: -3px;
     right: -3px;
 }
-
-.statement .collapse-button{
-    background-color: #448822;
-}
-
-.response .collapse-button{
-    background-color: #3399e6;
-}
-
 
 
 
@@ -161,12 +153,6 @@ body{
     margin: 10px;
     background-color: white;
 }
-
-
-.statement.bubble {
-    border-color: #448822;
-}
-
 
 .bubble.bubble-right:before{
     content: "";
@@ -218,10 +204,6 @@ body{
     display: none !important;
 }
 
-.response.bubble{
-    border-color: #3399e6;
-}
-
 .bubble-left:after{
     content: "";
     display: block;
@@ -231,7 +213,7 @@ body{
     width: 0;
     border-width: 13px 13px 0 0 ;
     border-style: solid;
-    border-color: transparent #FFFFFF;
+    border-color: transparent white;
 }
 
 .bubble-left:before{
@@ -243,7 +225,7 @@ body{
     width: 0;
     border-width: 20px 20px 0 0;
     border-style: solid;
-    border-color: transparent #3399e6;
+    border-color: transparent inherit;
 }
 
 .question .prompt{
@@ -272,10 +254,6 @@ body{
     width: 560px;
 }
 
-.question{
-    background: #ff484b;
-}
-
 .body{
     text-align: center;
     padding-top: 100px;
@@ -296,7 +274,8 @@ body{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    /*-webkit-box-shadow: inset 0 0 6px #444;*/
+    border: 1px solid #AAA;
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
@@ -305,8 +284,5 @@ body{
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(0,0,0,0.8);
-}
-::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(0,0,0,0.4);
+    background: #AAA;
 }
