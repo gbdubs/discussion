@@ -260,15 +260,15 @@ body{
     padding-top: 100px;
 }
 
-.answer{
-    background: #7070ff;
+.answer:hover{
+    opacity: .7;
 }
 
 .snippet-wrapper.selected .answer{
     cursor: pointer;
 }
 
-/* Let's get this party started */
+/* Let's get this party started :) */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -286,4 +286,24 @@ body{
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: #AAA;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+* {
+    -webkit-touch-callout: inherit;
+    -webkit-user-select: inherit;
+    -khtml-user-select: inherit;
+    -moz-user-select: inherit;
+    -ms-user-select: inherit;
+    user-select: inherit;
+    cursor: inherit;
 }

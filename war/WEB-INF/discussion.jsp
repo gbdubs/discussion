@@ -22,11 +22,11 @@
         <c:forEach var="snippet" items="${snippets}">
         	<c:choose>
         		<c:when test="${snippet == selectedSnippet}">
-        			<div class="snippet-wrapper selected"  data-snippet="${snippet.id}" data-left="${snippet.leftCoordinate}" 
+        			<div class="snippet-wrapper selected no-select"  data-snippet="${snippet.id}" data-left="${snippet.leftCoordinate}" 
         			data-top="{snippet.topCoordinate}" style="left: ${snippet.leftCoordinate}; top: ${snippet.topCoordinate}">
         		</c:when>
         		<c:otherwise>
-        			<div class="snippet-wrapper background"  data-snippet="${snippet.id}" data-left="${snippet.leftCoordinate}" 
+        			<div class="snippet-wrapper background no-select"  data-snippet="${snippet.id}" data-left="${snippet.leftCoordinate}" 
         			data-top="{snippet.topCoordinate}" style="left: ${snippet.leftCoordinate}; top: ${snippet.topCoordinate}">
         		</c:otherwise>
         	</c:choose>

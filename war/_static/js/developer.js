@@ -20,10 +20,10 @@ $(function(){
     			"left": left,
     			"top": top
     		});
+    		$(this).addClass("no-select");
     	});
     }
     
-
     function deactiveateActiveSnippet(){
         uninstallChangeForActiveSnippet();
         uninstallCollapseForActiveSnippet();
@@ -59,6 +59,7 @@ $(function(){
     			"left": "",
     			"top": ""
     		});
+    		$(this).removeClass("no-select");
     	});
     }
     

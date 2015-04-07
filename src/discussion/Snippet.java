@@ -152,7 +152,7 @@ public class Snippet{
 	}
 	
 	public String getRandomSecondaryColor(){
-		String[] colors = {"#00B9AE", "#3F7CAC", "#0C7489", "#4C7D57", "#00B9AE", "#397367"};
+		String[] colors = {"#00B9AE", "#3F7CAC", "#0C7489", "#4C7D57", "#00B9AE", "#397367", "#5B6195", "#C84630", "#ECA400"};
 		int i = (int) (Math.random() * colors.length);
 		while (colors[i].equals(color)){
 			i = (int) (Math.random() * colors.length);
