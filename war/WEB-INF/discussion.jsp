@@ -20,13 +20,14 @@
             <a href="/start">Start One</a>
         </div>
         <c:forEach var="snippet" items="${snippets}">
-        	
         	<c:choose>
         		<c:when test="${snippet == selectedSnippet}">
-        			<div class="snippet-wrapper selected"  data-snippet="${snippet.id}">
+        			<div class="snippet-wrapper selected"  data-snippet="${snippet.id}" data-left="${snippet.leftCoordinate}" 
+        			data-top="{snippet.topCoordinate}" style="left: ${snippet.leftCoordinate}; top: ${snippet.topCoordinate}">
         		</c:when>
         		<c:otherwise>
-        			<div class="snippet-wrapper background"  data-snippet="${snippet.id}">
+        			<div class="snippet-wrapper background"  data-snippet="${snippet.id}" data-left="${snippet.leftCoordinate}" 
+        			data-top="{snippet.topCoordinate}" style="left: ${snippet.leftCoordinate}; top: ${snippet.topCoordinate}">
         		</c:otherwise>
         	</c:choose>
 			
@@ -78,6 +79,11 @@
 				</div>
 			</div>
         </c:forEach> 
+    </div>
+    
+    <div class="modal">
+    
+    
     </div>
     <script src="/_static/js/developer.js"></script>
 </body>

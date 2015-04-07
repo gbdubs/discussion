@@ -11,10 +11,23 @@ $(function(){
             $(this).off();
         });
     }
+    
+    function addPositionStyle(){
+    	$(".snippet-wrapper.selected").each(function(){
+    		var left = $(this).data("left");
+    		var top = $(this).data("top");
+    		$(this).css({
+    			"left": left,
+    			"top": top
+    		});
+    	});
+    }
+    
 
     function deactiveateActiveSnippet(){
         uninstallChangeForActiveSnippet();
         uninstallCollapseForActiveSnippet();
+        addPositionStyle();
     }
 
     function installCollapseForActiveSnippet() {
@@ -39,10 +52,20 @@ $(function(){
             });
         });
     }
-
+    
+    function removePositionStyle(){
+    	$(".snippet-wrapper.selected").each(function(){
+    		$(this).css({
+    			"left": "",
+    			"top": ""
+    		});
+    	});
+    }
+    
     function activateActiveSnippet(){
         installChangeForActiveSnippet();
         installCollapseForActiveSnippet();
+        removePositionStyle();
     }
 
     activateActiveSnippet();

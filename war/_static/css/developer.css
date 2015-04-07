@@ -57,6 +57,9 @@ body{
     position: relative;
 }
 
+.snippet-wrapper.background > .snippet{
+	position: absolute;
+}
 
 .snippet-wrapper.background{
     overflow-y: visible;
@@ -106,6 +109,7 @@ body{
 .snippet-wrapper.selected > .snippet{
     left: 10px;
     overflow: visible;
+    position: relative;
 }
 
 .collapse-button,
@@ -233,9 +237,6 @@ body{
     padding-top: 5px;
     border-top: 2px solid white;
 }
-
-
-
 
 
 

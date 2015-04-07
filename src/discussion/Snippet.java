@@ -159,4 +159,11 @@ public class Snippet{
 		}
 		return colors[i];
 	}
+	
+	public String getLeftCoordinate(){
+		return "" + ((id * 43) % 100 - 25) + "vw";
+	}
+	public String getTopCoordinate(){
+		return "" + ((id * 771) % 90 - 10) + "vh";
+	}
 }
