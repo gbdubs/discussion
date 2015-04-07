@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<snippets>
+	<snippet>
+		<id>0</id>
+		<summary></summary>
+		<response></response>
+		<question>Do you think that prisoners should be given the opporotunity to pursue a college education while in prison?</question>
+		<answers>
+			<answer>
+				<affirmative-id>1</affirmative-id>
+				<text>Yes, I think that it would be better if prisoners recieved an education while in jail</text>
+			</answer>
+			<answer>
+				<affirmative-id>2</affirmative-id>
+				<text>No, I have some objections to providing lawbreakers with free education from the state</text>
+			</answer>
+		</answers>
+	</snippet>
+	<snippet>
+		<id>1</id>
+		<summary></summary>
+		<response></response>
+		<question>What is your primary reason for supporting the education of inmates?</question>
+		<answers>
+			<answer>
+				<affirmative-id>3</affirmative-id>
+				<text>It is better for the prisoners, and gives them a chance at re-entering society</text>
+			</answer>
+			<answer>
+				<affirmative-id>4</affirmative-id>
+				<text>It is the ethical thing to do, and gives prisoners a way to focus their lives</text>
+			</answer>
+			<answer>
+				<affirmative-id>5</affirmative-id>
+				<text>Many prisoners have not had the opporotunity to receive a good education</text>
+			</answer>
+			<answer>
+				<affirmative-id>6</affirmative-id>
+				<text>It will decrease rates of ricidivism, and lower our overall culture of crime</text>
+			</answer>
+		</answers>
+	</snippet>
+	<snippet>
+		<id>2</id>
+		<summary></summary>
+		<response></response>
+		<question>What are your primary objections surrounding the education of inmates?</question>
+		<answers>
+			<answer>
+				<affirmative-id>7</affirmative-id>
+				<text>Financially:  we shouldn't be paying for something to benefit lawbreakers</text>
+			</answer>
+			<answer>
+				<affirmative-id>8</affirmative-id>
+				<text>Ethically:  It isn't right to reward someone for breaking the law</text>
+			</answer>
+			<answer>
+				<affirmative-id>9</affirmative-id>
+				<text>Behaviorally:  This lessens the degree to which prison is a punishment</text>
+			</answer>
+			<answer>
+				<affirmative-id>10</affirmative-id>
+				<text>Forcasting:  Educating those who harm our society is a bad idea</text>
+			</answer>
+		</answers>
+	</snippet>
+</snippets>

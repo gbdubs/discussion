@@ -1,0 +1,59 @@
+[  
+   {  
+      "id":"0",
+      "discussion":"InmateEducation",
+      "color":"#20405E",
+      "summary":"",
+      "response":"",
+      "prompt":"Do you think that prisoners should be given the opporotunity to pursue a college education while in prison?",
+      "answerTexts":[
+      		"Yes, I think that it would be better if prisoners recieved an education while in jail",
+      		"No, I have some objections to providing lawbreakers with free education from the state"
+      ],
+      "answerIds":[
+      		1,
+      		2
+      ]
+   },
+   
+   {  
+      "id":"1",
+      "discussion":"InmateEducation",
+      "color":"#4C7D57",
+      "summary":"For a few reasons, I think it would be better if the government educates the people it encarserates",
+      "response":"That is a very reasonable viewpoint. What are some reasons you support it?",
+      "prompt":"What is your primary reason for supporting the education of inmates?",
+      "answerTexts":[
+      		"It is better for the prisoners, and gives them a chance at re-entering society",
+      		"It is the ethical thing to do, and gives prisoners a way to focus their lives",
+      		"Many prisoners have not had the opporotunity to receive a good education",
+      		"It will decrease rates of ricidivism, and lower our overall culture of crime"
+      ],
+      "answerIds":[
+      		3,
+      		4,
+      		5,
+      		6
+      ]
+   },   
+   {  
+      "id":"2",
+      "discussion":"InmateEducation",
+      "color":"#0C7489",
+      "summary":"For a few reasons, I think it would be better if the government doesn't spent time and money educating criminals",
+      "response":"That is a very reasonable instinct. What are some reasons you oppose it?",
+      "prompt":"What are your primary objections surrounding the education of inmates?",
+      "answerTexts":[
+      		"Financially:  we shouldn't be paying for something which only benefits lawbreakers",
+      		"Ethically:  It isn't right to reward someone for breaking the law",
+      		"Behaviorally:  This lessens the degree to which prison is a punishment",
+      		"Forcasting:  Educating those who harm our society is a bad idea"
+      ],
+      "answerIds":[
+      		7,
+      		8,
+      		9,
+      		10
+      ]
+   }
+]

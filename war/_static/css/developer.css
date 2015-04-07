@@ -1,0 +1,312 @@
+body{
+    margin: 0;
+}
+
+.title {
+    position: fixed;
+    top: 0;
+    font-weight: bolder;
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    z-index: 200;
+    color: #666;
+}
+
+.collapsed-text{
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu{
+    position: fixed;
+    top: 60px;
+    width: 600px;
+    left: Calc(50% - 300px);
+    text-align: center;
+    box-shadow: 0px 3px 71px 15px white;
+    z-index: 150;
+}
+
+
+.menu a{
+    margin: 0 30px;
+    color: #666;
+    background-color: white;
+
+}
+
+.bg-grey-gradient{
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 80%, #dddddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(80%,#e5e5e5), color-stop(100%,#dddddd));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 80%,#dddddd 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 80%,#dddddd 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 80%,#dddddd 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 80%,#dddddd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 );
+}
+
+.snippets{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.snippet{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    display: inline-block;
+    max-width: 600px;
+    position: relative;
+}
+
+
+.snippet-wrapper.background{
+    overflow-y: visible;
+    width: 640px;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    -webkit-transition: all 500ms ease-out 0s;
+    -moz-transition: all 500ms ease-out 0s;
+    -o-transition: all 500ms ease-out 0s;
+    -ms-transform: scale(.3); /* IE 9 */
+    -webkit-transform: scale(.3); /* Safari */
+    transform: scale(.3);
+    opacity: .5;
+}
+
+.snippet-wrapper.selected{
+    overflow-y: auto;
+    width: 640px;
+    position: fixed;
+    top: 80px;
+    max-height: Calc(100vh - 80px);
+    left: Calc(50% - 320px);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+
+    -webkit-transition: all 500ms ease-out 0.5s;
+    -moz-transition: all 500ms ease-out 0.5s;
+    -o-transition: all 500ms ease-out 0.5s;
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1);
+    opacity: 1;
+    z-index: 100;
+}
+
+.snippet-wrapper.selected > .snippet{
+    left: 10px;
+    overflow: visible;
+}
+
+.collapse-button,
+.fa.fa-minus.collapse-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    color: white;
+    vertical-align: middle;
+    font-size: 15px;
+    text-align: right;
+    border-bottom-left-radius: 10px;
+    padding-right: 6px;
+}
+
+.snippet-wrapper.selected .collapse-button{
+    cursor: pointer;
+}
+
+.fa.fa-plus.collapse-button{
+    height: 24px;
+    width: 19px;
+    line-height: 24px;
+    border-radius: 15px;
+    top: -3px;
+    right: -3px;
+}
+
+.statement .collapse-button{
+    background-color: #448822;
+}
+
+.response .collapse-button{
+    background-color: #3399e6;
+}
+
+
+
+
+
+.bubble{
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 10px;
+    position: relative;
+    color: #444;
+    margin: 10px;
+    background-color: white;
+}
+
+
+.statement.bubble {
+    border-color: #448822;
+}
+
+
+.bubble.bubble-right:before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: -20px;
+    width: 0;
+    border-width: 20px 0 0 20px;
+    border-style: solid;
+    border-color: transparent inherit;
+}
+
+.bubble.bubble-right:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 13px;
+    right: -13px;
+    width: 0;
+    border-width: 13px 0 0 13px;
+    border-style: solid;
+    border-color: transparent white;
+}
+
+.editor-wrapper{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-color: inherit;
+    border-top: 2px solid;
+    overflow: hidden;
+}
+
+.editor textarea{
+    width: Calc(100% - 10px);
+    height: 100px;
+    resize: vertical;
+    -webkit-transition: all 500ms ease-out 0s;
+    -moz-transition: all 500ms ease-out 0s;
+    -o-transition: all 500ms ease-out 0s;
+    transition: all 500ms ease-out 0s;
+}
+
+.no-height{
+    height: 0 !important;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.response.bubble{
+    border-color: #3399e6;
+}
+
+.bubble-left:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 13px;
+    left: -13px;
+    width: 0;
+    border-width: 13px 13px 0 0 ;
+    border-style: solid;
+    border-color: transparent #FFFFFF;
+}
+
+.bubble-left:before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    width: 0;
+    border-width: 20px 20px 0 0;
+    border-style: solid;
+    border-color: transparent #3399e6;
+}
+
+.question .prompt{
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+.answer,
+.question{
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    width: 560px;
+}
+
+.question{
+    background: #ff484b;
+}
+
+.body{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.answer{
+    background: #7070ff;
+}
+
+.snippet-wrapper.selected .answer{
+    cursor: pointer;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.8);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.4);
+}
