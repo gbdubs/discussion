@@ -36,9 +36,7 @@
 						<div class="statement bubble bubble-right" style="border-color: ${snippet.color};">
 							<i class="fa fa-minus collapse-button"></i>
 							<div class="collapsed-text hidden">Summary of Your Opinion</div>
-							<div class="full-text">
-								${snippet.summary}		
-								<div class="editor-wrapper">
+							<div class="full-text">${snippet.summary}<div class="editor-wrapper hidden">
 									Don't agree with how that was phrased? Edit it!
 									<form class="editor no-height">
 										<textarea>Put in your description of this viewpoint here. Try to remain concise!</textarea>
@@ -52,9 +50,7 @@
 						<div class="response bubble bubble-left" style="border-color: ${snippet.randomSecondaryColor};">
 							<i class="fa fa-minus collapse-button"></i>
 							<div class="collapsed-text hidden">A Response From A Peer</div>
-							<div class="full-text">
-								${snippet.response}
-							</div>
+							<div class="full-text">${snippet.response}</div>
 						</div>
 					</c:if>
 					<div class="question" style="background: ${snippet.randomSecondaryColor};">

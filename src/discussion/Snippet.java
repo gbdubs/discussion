@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.google.appengine.api.datastore.AsyncDatastoreService;
 import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.Text;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.EntityNotFoundException;
@@ -35,7 +36,6 @@ public class Snippet{
 	public static List<Snippet> createNewSnippetsOfType(String discussionName, String rawData) {
 		Type listType = new TypeToken<ArrayList<Snippet>>(){}.getType();
 		List<Snippet> toReturn = new Gson().fromJson(rawData, listType);
-		System.out.println(toReturn.toString());
 		return toReturn;
 	}
 
@@ -43,8 +43,8 @@ public class Snippet{
 		this.discussion = (String) e.getProperty("discussion");
 		this.id = (long) e.getProperty("id");
 		this.color = (String) e.getProperty("color");
-		this.summary = (String) e.getProperty("summary");
-		this.response = (String) e.getProperty("response");
+		this.summary = ((Text) e.getProperty("summary")).getValue();
+		this.response = ((Text) e.getProperty("response")).getValue();
 		this.prompt = (String) e.getProperty("prompt");
 		this.answerTexts = (List<String>) e.getProperty("answerTexts");
 		this.answerIds = (List<Long>) e.getProperty("answerIds");
@@ -74,8 +74,8 @@ public class Snippet{
 		e.setProperty("discussion", discussion);
 		e.setUnindexedProperty("id", new Long(id));
 		e.setUnindexedProperty("color", color);
-		e.setUnindexedProperty("summary", summary);
-		e.setUnindexedProperty("response", response);
+		e.setUnindexedProperty("summary", new Text(summary));
+		e.setUnindexedProperty("response", new Text(response));
 		e.setUnindexedProperty("prompt", prompt);
 		e.setUnindexedProperty("answerTexts", answerTexts);
 		e.setUnindexedProperty("answerIds", answerIds);
@@ -152,7 +152,7 @@ public class Snippet{
 	}
 	
 	public String getRandomSecondaryColor(){
-		String[] colors = {"#00B9AE", "#3F7CAC", "#0C7489", "#4C7D57", "#00B9AE", "#397367", "#5B6195", "#C84630", "#ECA400"};
+		String[] colors = {"#2A044A", "#A0C55F", "#7AB317", "#0D6759", "#0B2E59"};
 		int i = (int) (Math.random() * colors.length);
 		while (colors[i].equals(color)){
 			i = (int) (Math.random() * colors.length);
@@ -161,9 +161,9 @@ public class Snippet{
 	}
 	
 	public String getLeftCoordinate(){
-		return "" + ((id * 43) % 100 - 25) + "vw";
+		return "" + ((id * 21) % 100 - 25) + "vw";
 	}
 	public String getTopCoordinate(){
-		return "" + ((id * 771) % 90 - 10) + "vh";
+		return "" + ((id * 34) % 90 - 10) + "vh";
 	}
 }

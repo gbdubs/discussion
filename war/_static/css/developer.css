@@ -145,9 +145,6 @@ body{
     right: -3px;
 }
 
-
-
-
 .bubble{
     padding: 10px;
     border: 3px solid;
@@ -238,6 +235,9 @@ body{
     border-top: 2px solid white;
 }
 
+.full-text{
+	white-space: pre-line;
+}
 
 
 
